@@ -1,0 +1,115 @@
+% Shared minimal CV layout and typography
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tgpagella}
+\usepackage[nopatch=item]{microtype}
+\usepackage[a4paper, top=14mm, bottom=14mm, left=18mm, right=18mm]{geometry}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks, pdfusetitle]{hyperref}
+
+\definecolor{ink}{HTML}{161616}
+\definecolor{muted}{HTML}{555555}
+\definecolor{rule}{HTML}{D0D0D0}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.04}
+\color{ink}
+
+% Section heading with thin bottom rule
+\newcommand{\cvsection}[1]{%
+  \vspace{9pt}%
+  {\fontsize{11.5}{14}\selectfont\bfseries #1}\par
+  \vspace{2pt}%
+  {\color{rule}\hrule height 0.4pt}%
+  \vspace{5pt}%
+}
+
+% Section heading without leading space (for top of side-by-side columns)
+\newcommand{\cvsectiontop}[1]{%
+  {\fontsize{11.5}{14}\selectfont\bfseries #1}\par
+  \vspace{2pt}%
+  {\color{rule}\hrule height 0.4pt}%
+  \vspace{5pt}%
+}
+
+% Education / Experience entry: {Organization}{Date range}{Role & optional bullets}
+\newcommand{\cventry}[3]{%
+  {\bfseries #1}\hfill\textcolor{muted}{#2}\par
+  \vspace{1pt}%
+  #3\par
+  \vspace{5pt}%
+}
+
+% Minimal bullet list for Work Experience details (use inside 3rd arg of \cventry)
+\newlist{cvbullets}{itemize}{1}
+\setlist[cvbullets]{%
+  label=\textcolor{muted}{--},
+  leftmargin=1.1em,
+  labelsep=0.45em,
+  topsep=2pt,
+  partopsep=0pt,
+  itemsep=1pt,
+  parsep=0pt
+}
+
+% Skill row for the left bottom column
+\newcommand{\cvskill}[2]{%
+  {\raggedright{\bfseries #1:} #2\par}%
+  \vspace{3.5pt}%
+}
+
+% Compact key-value row for the right bottom column (Languages & Other)
+\newcommand{\cvlang}[2]{%
+  {\bfseries #1}\hfill #2\par
+  \vspace{2.5pt}%
+}
+
+% Contact metadata label helper (uses \textcolor to stay in horizontal mode)
+\newcommand{\cvlabel}[1]{\textcolor{muted}{#1}}
+
+% Header with name + contact table on the left, optional portrait photo on the right
+% Usage: \cvheader{Name}{Contact rows}{photo.jpg} (leave 3rd arg empty to omit photo)
+\newcommand{\cvheader}[3]{%
+  \noindent
+  \begin{minipage}[t]{0.68\textwidth}
+    \vspace{0pt}%
+    {\fontsize{19}{22}\selectfont\bfseries #1}\par
+    \vspace{6pt}%
+    \renewcommand{\arraystretch}{1.12}%
+    \begin{tabular}{@{}p{3.1cm}@{\hspace{0.3cm}}l@{}}
+      #2
+    \end{tabular}%
+  \end{minipage}%
+  \hfill
+  \if\relax\detokenize{#3}\relax\else
+    \begin{minipage}[t]{0.28\textwidth}
+      \vspace{2pt}%
+      \raggedleft
+      \setlength{\fboxsep}{0pt}%
+      \setlength{\fboxrule}{0.4pt}%
+      \textcolor{rule}{\fbox{\includegraphics[width=3.4cm]{#3}}}%
+    \end{minipage}%
+  \fi
+  \par\vspace{2pt}%
+}
+
+% Two-column bottom section: {Left column content}{Right column content}
+\newcommand{\cvtwocol}[2]{%
+  \vspace{9pt}%
+  \noindent
+  \begin{minipage}[t]{0.60\textwidth}
+    \vspace{0pt}%
+    #1
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.35\textwidth}
+    \vspace{0pt}%
+    #2
+  \end{minipage}%
+  \par
+}

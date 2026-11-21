@@ -1,0 +1,78 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[czech]{babel}
+\input{cv_style}
+
+\hypersetup{
+  pdftitle={Životopis – Bc. Vojtěch Svoboda},
+  pdfauthor={Bc. Vojtěch Svoboda}
+}
+
+\begin{document}
+
+\cvheader{Bc. Vojtěch Svoboda}{%
+  \cvlabel{Kontakt}        & \href{mailto:svobvo@gmail.com}{svobvo@gmail.com} \\
+                           & +420~723~832~349 \\
+  \cvlabel{Lokalita}       & Brno \\
+  \cvlabel{Datum narození} & 3.~10.~1999 \\
+  \cvlabel{GitHub}         & \href{https://github.com/vojtas131}{github.com/vojtas131} \\
+}{photo.jpg}
+
+\cvsection{Vzdělání}
+
+\cventry{UTB FAI}{2026--současnost}{%
+  Informační technologie (Softwarové inženýrství) -- Magisterské studium%
+}
+\cventry{UTB FAI}{2023--2026}{%
+  Softwarové inženýrství -- Bakalářské studium%
+}
+\cventry{Střední průmyslová škola Brno, Purkyňova}{2015--2019}{%
+  Informační technologie -- zaměření Programování a~databáze%
+}
+
+\vspace{-5pt}
+\cvsection{Pracovní zkušenosti}
+
+\cventry{BIQ Bluesoft a.s.}{2022--současnost}{%
+  Fullstack developer na platformě Kentico%
+  \begin{cvbullets}
+    \item Vývoj webových aplikací a statických webů v technologiích TypeScript, JavaScript, Vue.js, React, Storybook a C\# na platformě Kentico a Umbraco
+    \item Využívání AI/LLM při vývoji (tvorba agentů, znovupoužitelných promptů a instrukcí)
+    \item Spolupráce na rozsáhlých projektech pro významné klienty (E.ON, Sazka, Comap, Orlen)
+  \end{cvbullets}
+}
+\cventry{Navertica a.s.}{2021--2022}{%
+  CRM Developer%
+  \begin{cvbullets}
+    \item Tvorba uživatelského rozhraní v prostředí CRM PowerApps (JavaScript, TypeScript, React) a vývoj C\# pluginů a API
+    \item Práce s cloudovými službami v Azure (Azure Functions, Azure Static Web Apps, Azure Key Vault) a správa verzování v Azure DevOps
+  \end{cvbullets}
+}
+\cventry{webProgress, s.r.o.}{2018}{%
+  Tvorba webu (odborná praxe)%
+}
+
+\vspace{-5pt}
+\cvtwocol{%
+  \cvsectiontop{Technologie \& Dovednosti}
+  \cvskill{Jazyky}{TypeScript, JavaScript, C\#, Python, SQL, C/C++}
+  \cvskill{Frontend \& Frameworky}{React, Vue.js, Storybook, HTML5/SCSS}
+  \cvskill{Backend \& CMS}{.NET / C\#, Kentico, REST API}
+  \cvskill{Cloud \& DevOps}{Azure (Portal, Functions, Static Web Apps, Key Vault), Docker, CI/CD, Azure DevOps, Git}
+  \cvskill{AI a~Development nástroje}{AI-driven development, LLM integrace (tvorba agentů, reusable promptů), GitHub Copilot, VS Code, Linux / Bash}
+}{%
+  \cvsectiontop{Jazykové a~ostatní znalosti}
+  \cvlang{Anglický jazyk}{C1}
+  \cvlang{Řidičský průkaz}{B}
+
+  \vspace{-2.5pt}
+  \cvsection{Zájmy a~záliby}
+  {\raggedright
+  \begin{cvbullets}[topsep=0pt]
+    \item Streamování na twitch.tv
+    \item Basketbal, hokej -- rekreačně
+    \item Sebevzdělávání v~oblasti IT a~AI
+    \item Pozorování nových trendů
+  \end{cvbullets}}
+}
+
+\end{document}

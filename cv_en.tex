@@ -1,0 +1,80 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[english]{babel}
+\input{cv_style}
+
+\hypersetup{
+  pdftitle={CV – Bc. Vojtěch Svoboda},
+  pdfauthor={Bc. Vojtěch Svoboda}
+}
+
+\begin{document}
+
+% Tip: Leave the third argument empty ({}) to omit the photo for US/UK applications.
+\cvheader{Bc. Vojtěch Svoboda}{%
+  \cvlabel{Contact}       & \href{mailto:svobvo@gmail.com}{svobvo@gmail.com} \\
+                          & +420~723~832~349 \\
+  \cvlabel{Location}      & Brno, Czech Republic \\
+  \cvlabel{Date of Birth} & October 3, 1999 \\
+  \cvlabel{GitHub}        & \href{https://github.com/vojtas131}{github.com/vojtas131} \\
+}{photo.jpg}
+
+\cvsection{Education}
+
+\cventry{Tomas Bata University in Zlín (UTB FAI)}{2026--Present}{%
+  Information Technology (Software Engineering) -- Master's Degree%
+}
+\cventry{Tomas Bata University in Zlín (UTB FAI)}{2023--2026}{%
+  Software Engineering -- Bachelor's Degree%
+}
+\cventry{Střední průmyslová škola Brno, Purkyňova}{2015--2019}{%
+  Information Technology -- Programming and Databases%
+}
+
+\vspace{-5pt}
+\cvsection{Work Experience}
+
+\cventry{BIQ Bluesoft a.s.}{2022--Present}{%
+  Full-Stack Developer on the Kentico platform%
+  \begin{cvbullets}
+    \item Developing web applications and static websites using TypeScript, JavaScript, Vue.js, React, Storybook, and C\# on the Kentico and Umbraco platforms
+    \item Leveraging AI/LLMs in development (building agents, reusable prompts, and instructions)
+    \item Collaborating on large-scale projects for major clients (E.ON, Sazka, Comap, Orlen)
+  \end{cvbullets}
+}
+\cventry{Navertica a.s.}{2021--2022}{%
+  CRM Developer%
+  \begin{cvbullets}
+    \item Building user interfaces in CRM PowerApps (JavaScript, TypeScript, React) and developing C\# plugins and APIs
+    \item Working with cloud services in Azure (Azure Functions, Azure Static Web Apps, Azure Key Vault) and managing version control in Azure DevOps
+  \end{cvbullets}
+}
+\cventry{webProgress, s.r.o.}{2018}{%
+  Web Development (Internship)%
+}
+
+\vspace{-5pt}
+\cvtwocol{%
+  \cvsectiontop{Technologies \& Skills}
+  \cvskill{Languages}{TypeScript, JavaScript, C\#, Python, SQL, C/C++}
+  \cvskill{Frontend \& Frameworks}{React, Vue.js, Storybook, HTML5/SCSS}
+  \cvskill{Backend \& CMS}{.NET / C\#, Kentico, REST API}
+  \cvskill{Cloud \& DevOps}{Azure (Portal, Functions, Static Web Apps, Key Vault), Docker, CI/CD, Azure DevOps, Git}
+  \cvskill{AI \& Development Tools}{AI-driven development, LLM integration (agent development, reusable prompts), GitHub Copilot, VS Code, Linux / Bash}
+}{%
+  \cvsectiontop{Languages \& Other}
+  \cvlang{Czech}{Native}
+  \cvlang{English}{C1}
+  \cvlang{Driving License}{B}
+
+  \vspace{-2.5pt}
+  \cvsection{Interests}
+  {\raggedright
+  \begin{cvbullets}[topsep=0pt]
+    \item Streaming on Twitch
+    \item Recreational basketball and ice hockey
+    \item Self-education in IT and AI
+    \item Following emerging tech trends
+  \end{cvbullets}}
+}
+
+\end{document}

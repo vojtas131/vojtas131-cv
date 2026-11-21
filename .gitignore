@@ -1,0 +1,35 @@
+# LaTeX auxiliary and build files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.pdfsync
+
+# Bibliography / Index / Glossary
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.idx
+*.ilg
+*.ind
+*.glo
+*.gls
+*.glg
+*.acn
+*.acr
+*.alg
+
+# Intermediate output formats
+*.dvi
+*.xdv
+*.ps
+
+# Uncomment to also ignore compiled PDFs:
+# *.pdf
